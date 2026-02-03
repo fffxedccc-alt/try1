@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f9e3e3;
+    background-color: #fff0f5;
     font-family: 'Arial', sans-serif;
 }
 
@@ -14,11 +14,36 @@ body {
 
 .header_text {
     font-size: 3em;
-    color: #d32f2f;
+    color: #ff1493;
+    margin-bottom: 40px;
+    animation: typing 3s steps(30), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #ff1493;
+    width: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
 }
 
 .gif_container img {
     width: 100%; 
     max-width: 500px; 
-    height: auto; 
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease 3s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
