@@ -16,7 +16,9 @@ body {
     font-size: 3em;
     color: #ff1493;
     margin-bottom: 40px;
-    animation: typing 3s steps(30), blink .5s step-end infinite alternate;
+    
+    /* Анимация печатания текста */
+    animation: typing 3s steps(30, end), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid #ff1493;
@@ -24,11 +26,13 @@ body {
     animation-fill-mode: forwards;
 }
 
+/* Анимация печатания */
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
 }
 
+/* Мигающий курсор */
 @keyframes blink {
     50% { border-color: transparent }
 }
@@ -39,11 +43,20 @@ body {
     height: auto;
     border-radius: 10px;
     margin-top: 20px;
+    
+    /* Анимация появления гифки */
     opacity: 0;
     animation: fadeIn 2s ease 3s forwards;
 }
 
+/* Плавное появление гифки */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
 }
