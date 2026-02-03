@@ -79,7 +79,4 @@ function handleNoClick() {
 
 function handleYesClick() {
     window.location.href = "yes_page.html";
-function handleYesClick() {
-    console.log("Кнопка 'Да' нажата! Переход на yes_page.html");
-    window.location.href = "yes_page.html";
 }
